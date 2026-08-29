@@ -16,6 +16,7 @@ update_arch() {
 
     rm -rf "$crate"
     cp -r protoc-bin-vendored-arch-template "$crate"
+    mv "$crate/Cargo.toml.in" "$crate/Cargo.toml"
     mkdir "$crate/bin"
 
     exe_suffix=""
